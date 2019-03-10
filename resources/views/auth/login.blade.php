@@ -57,11 +57,12 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
+                                <!-- パスワード再登録無効化しているので、ボタンも無効化 -->
+                                <!-- @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif
+                                @endif -->
                             </div>
                         </div>
                     </form>
