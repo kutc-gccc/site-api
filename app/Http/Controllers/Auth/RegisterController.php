@@ -10,6 +10,18 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
 {
+    //新規登録無効化
+    public function showRegistrationForm()
+    {
+        return redirect('login');
+    }
+
+
+    public function register()
+    {
+
+    }
+
     /*
     |--------------------------------------------------------------------------
     | Register Controller
