@@ -18,21 +18,14 @@ Auth::routes();
 //パスワードリセット無効化
 Route::redirect('/password/reset', '/home', 301);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/{id}', 'HomeController@edit');
+Route::get('/home', 'HomeController@index');
+Route::get('/view/{id}', 'SiteDataDBController@view');
+Route::get('/view-all', 'HomeController@viewAll');
+
+Route::post('/delete/{id}/{url?}', 'SiteDataDBController@delete');
+Route::post('/upload', 'SiteDataDBController@upload');
 
 
-        // // Registration Routes...
-        // if ($options['register'] ?? true) {
-        //     $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-        //     $this->post('register', 'Auth\RegisterController@register');
-        // }
-
-        // // Password Reset Routes...
-        // if ($options['reset'] ?? true) {
-        //     $this->resetPassword();
-        // }
-
-        // // Email Verification Routes...
-        // if ($options['verify'] ?? false) {
-        //     $this->emailVerification();
-        // }
+//api
+Route::resource('api', 'GcccSiteAPIController');
