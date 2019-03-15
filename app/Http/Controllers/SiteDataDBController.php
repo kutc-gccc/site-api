@@ -28,7 +28,7 @@ class SiteDataDBController extends Controller
         session()->flash('flash_message', $title .' を削除しました');
         
         if(isset($url)){
-            return redirect($url);
+            return redirect('/'.$url);
         }else{
             return redirect('/home');
         }
