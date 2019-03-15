@@ -28,7 +28,7 @@
                     <th>{{$title_data->id}}</th>
                     <th>{{$title_data->title}}</th>
                     <th>
-                        <form method="POST" action="/delete/{{$title_data->id}}/view-all/" >
+                        <form method="POST" action="/delete/{{$title_data->id}}/view-all" >
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <button type="submit"  class="btn btn-danger btn-sm">削除</button>
                         </form>
