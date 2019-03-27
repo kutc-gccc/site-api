@@ -176,7 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         //CORS 対応
-        Barryvdh\Cors\ServiceProvider::class,
+        // Barryvdh\Cors\ServiceProvider::class,
     ],
 
     /*
